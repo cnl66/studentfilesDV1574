@@ -41,7 +41,9 @@ def create_dots():
                                     LINE_Y_START + LINE_DISTANCE * i), DOT_SIZE))
         hidden_dots.append(row)
     #dot_map will track the color of each result dot as
-    #the graphics package offers no getColor function.
+    #the graphics package offers no getColor function
+    #NOTE: Global structures are normally not good practice, 
+    #its only purpose here is to simplify call interface for students
     global dot_map
     dot_map = []
     for _ in range(GAME_SIZE):
@@ -67,7 +69,9 @@ def create_pegs():
                                              PEGS_START_POS_Y + i * LINE_DISTANCE + x//2), PEG_SIZE)
             hidden_pegs[i][x].setFill(PEGS[BLANK])
     #peg_map will track the color of each result dot as
-    #the graphics package offers no getColor function.
+    #the graphics package offers no getColor function
+    #NOTE: Global structures are normally not good practice, 
+    #its only purpose here is to simplify call interface for students
     global peg_map
     peg_map = []
     for _ in range(GAME_SIZE):
